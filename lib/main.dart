@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.email),
               title: Text('Email'),
-              subtitle: Text('OwaizObey12@mail.com'),
+              subtitle: Text('OwaizObey12@gmail.com'),
               trailing: Icon(Icons.send),
             ),
           ],
