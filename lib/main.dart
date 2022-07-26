@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freecode_1/bg_image.dart';
+import 'package:freecode_1/drawer.dart';
 
 void main() {
   runApp(
@@ -40,10 +42,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(6.0)),
             child: Column(
               children: [
-                Image.asset(
-                  'assets/bg.avif',
-                  fit: BoxFit.cover,
-                ),
+                BgImage(),
                 SizedBox(
                   height: 20,
                 ),
@@ -75,33 +74,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            UserAccountsDrawerHeader(
-              accountName: Text('Owaiz Kazi'),
-              accountEmail: Text('OwaizObey12@gmail.com'),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1896&q=80'),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Account'),
-              subtitle: Text('Personal'),
-              trailing: Icon(Icons.edit),
-            ),
-            ListTile(
-              leading: Icon(Icons.email),
-              title: Text('Email'),
-              subtitle: Text('OwaizObey12@gmail.com'),
-              trailing: Icon(Icons.send),
-            ),
-          ],
-        ),
-      ),
+      drawer: MyDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           myText = _nameController.text;
