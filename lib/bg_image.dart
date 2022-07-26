@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freecode_1/main.dart';
+import 'package:freecode_1/pages/homepage.dart';
 
 void main() {
   runApp(HomePage());
