@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Awesome Appp'),
+        title: Text('Awesome App'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             color: Colors.black,
             width: 200,
             height: 400,
-            child: Column(  
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
