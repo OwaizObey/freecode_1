@@ -13,6 +13,10 @@ void main() {
       title: 'Awesome Apps',
       home: LoginPage(),
       theme: ThemeData(primarySwatch: Colors.purple),
+      routes: {
+        '/login': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+      },
     ),
   );
 }
