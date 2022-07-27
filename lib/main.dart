@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:freecode_1/pages/homepage.dart';
 import 'package:freecode_1/pages/login_page.dart';
-// import 'package:freecode_1/bg_image.dart';
-// import 'package:freecode_1/drawer.dart';
+import 'package:freecode_1/pages/utils/constants.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:html';
 
-// import 'change_name_card.dart';
-
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Constants.prefs = await SharedPreferences.getInstance();
   runApp(
     MaterialApp(
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       title: 'Awesome Apps',
-      home: LoginPage(),
+      home: Constants.prefs.getBool('loggedIn') == true
+          ? HomePage()
+          : LoginPage(),
       theme: ThemeData(primarySwatch: Colors.purple),
       routes: {
         '/login': (context) => LoginPage(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freecode_1/bg_image.dart';
 import 'package:freecode_1/pages/homepage.dart';
+import 'package:freecode_1/pages/utils/constants.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -65,6 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       ElevatedButton(
                         onPressed: () {
+                          Constants.prefs.setBool('loggedIn', true);
                           Navigator.pushNamed(context, '/home');
                         },
                         child: Text('Sign In'),
