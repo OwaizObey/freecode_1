@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freecode_1/pages/homepage.dart';
+import 'package:freecode_1/pages/login_page.dart';
 // import 'package:freecode_1/bg_image.dart';
 // import 'package:freecode_1/drawer.dart';
 
@@ -10,7 +11,7 @@ void main() {
     MaterialApp(
       // debugShowCheckedModeBanner: false,
       title: 'Awesome Apps',
-      home: HomePage(),
+      home: LoginPage(),
       theme: ThemeData(primarySwatch: Colors.purple),
     ),
   );

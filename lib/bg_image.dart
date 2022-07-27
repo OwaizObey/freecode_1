@@ -14,6 +14,8 @@ class BgImage extends StatelessWidget {
     return Image.asset(
       'assets/bg.avif',
       fit: BoxFit.cover,
+      color: Colors.black.withOpacity(0.7),
+      colorBlendMode: BlendMode.darken,
     );
   }
 }
